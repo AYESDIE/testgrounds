@@ -57,25 +57,6 @@ img nrotate90(img im) {
             //std::cout << im.geth() - 1 - j + im.geth() * i << " " << i + im.geth()*j << " | " ;
             int offset = std::floor(std::abs(im.geth() - im.getw())/2);
 
-//            x_dest = x_dest - offset * im.getw() + offset;
-//            x_dest = x_dest + i * im.geth();
-
-//          h < w
-//            int x_dest = (im.geth() - 1 - j + im.geth() * i);
-//            x_dest = x_dest + offset;
-//            x_dest = x_dest + i * (std::abs(im.geth()- im.getw()));
-//            x_dest = x_dest - offset * im.getw();
-
-//          h > w
-//            int  x_dest = (im.geth() - 1 - j + im.geth() * i);
-//            x_dest = x_dest - offset;
-//            x_dest = x_dest - offset * im.getw();
-//            x_dest = x_dest - (i - 1) * (std::abs(im.geth()- im.getw()));
-//            x_dest = x_dest - i * (std::abs(im.geth()- im.getw()));
-//            x_dest = x_dest + offset * im.getw();
-
-//            if ((x_dest < std::pow(im.getw(), 2)) && (x_dest >= 0))
-//            if ((x_dest >= offset * im.getw()) && (x_dest < im.geth() * im.getw()))
             if (im.getw() < im.geth()) {
                 int x_dest = (im.geth() - 1 - j + im.geth() * i);
                 x_dest = x_dest + 2;
@@ -109,28 +90,8 @@ img nrotate270(img im) {
     std::vector<int> kekw(im.geth() * im.getw());
     for (int j = 0; j < im.geth(); ++j) {
         for (int i = 0; i < im.getw(); ++i) {
-            //std::cout << im.geth() - 1 - j + im.geth() * i << " " << i + im.geth()*j << " | " ;
             int offset = std::floor(std::abs(im.geth() - im.getw())/2);
 
-//            x_dest = x_dest - offset * im.getw() + offset;
-//            x_dest = x_dest + i * im.geth();
-
-//          h < w
-//            int x_dest = (im.geth() - 1 - j + im.geth() * i);
-//            x_dest = x_dest + offset;
-//            x_dest = x_dest + i * (std::abs(im.geth()- im.getw()));
-//            x_dest = x_dest - offset * im.getw();
-
-//          h > w
-//            int  x_dest = (im.geth() - 1 - j + im.geth() * i);
-//            x_dest = x_dest - offset;
-//            x_dest = x_dest - offset * im.getw();
-//            x_dest = x_dest - (i - 1) * (std::abs(im.geth()- im.getw()));
-//            x_dest = x_dest - i * (std::abs(im.geth()- im.getw()));
-//            x_dest = x_dest + offset * im.getw();
-
-//            if ((x_dest < std::pow(im.getw(), 2)) && (x_dest >= 0))
-//            if ((x_dest >= offset * im.getw()) && (x_dest < im.geth() * im.getw()))
             if (im.getw() < im.geth()) {
                 int x_dest = (im.geth() - 1 - j + im.geth() * i);
                 x_dest = x_dest + 2;
